@@ -3,7 +3,7 @@ Angular TypeScript frontend
 
 ## Dependencies
 node
-npm install forms
+ng --version : 18.2.12 or above
 
 ## How to run
 - Open a cmd or terminal such as git bash
