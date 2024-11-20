@@ -3,6 +3,7 @@ Angular TypeScript frontend
 
 ## Dependencies
 node
+npm install forms
 
 ## How to run
 - Open a cmd or terminal such as git bash
