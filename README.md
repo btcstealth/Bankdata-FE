@@ -12,3 +12,7 @@ Angular TypeScript frontend
 Custom exceptions and errors:
 
 Ignored package vulnerbilities:
+
+
+## Generate frontend template with options cmd:
+ng new currency-exchange --routing=true --flat --module=app
