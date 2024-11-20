@@ -2,8 +2,8 @@
 Angular TypeScript frontend
 
 ## Dependencies
-node
-ng --version : 18.2.12 or above
+- have node installed
+- ng --version : 18.2.12 or above
 
 ## How to run
 - Open a cmd or terminal such as git bash
