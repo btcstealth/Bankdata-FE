@@ -2,17 +2,17 @@
 Angular TypeScript frontend
 
 ## Dependencies
-
+node
 
 ## How to run
+- Open a cmd or terminal such as git bash
+- Run ng serve from project root
+- Access app via http://localhost:4200/ in browser
 
-## Endpoints and functionality
+## Functionality
 
 ## Considerations
-Custom exceptions and errors:
-
 Ignored package vulnerbilities:
-
 
 ## Generate frontend template with options cmd:
 ng new my-app --routing --style=scss --skip-tests --strict --no-standalone
