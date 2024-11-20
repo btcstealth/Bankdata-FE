@@ -15,4 +15,4 @@ Ignored package vulnerbilities:
 
 
 ## Generate frontend template with options cmd:
-ng new currency-exchange --routing=true --flat --module=app
+ng new my-app --routing --style=scss --skip-tests --strict --no-standalone
