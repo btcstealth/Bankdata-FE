@@ -2,8 +2,9 @@
 Angular TypeScript frontend
 
 ## Dependencies
-node
-npm install forms
+- have node installed
+- ng --version : 18.2.12 or above
+- have backend running on localhost:8080/
 
 ## How to run
 - Open a cmd or terminal such as git bash
@@ -11,6 +12,7 @@ npm install forms
 - Access app via http://localhost:4200/ in browser
 
 ## Functionality
+Very simple functionality for specifying the from and to currencies in dropdowns and a button for performing a request to get the associated exchange rate.
 
 ## Considerations
 Ignored package vulnerbilities:
