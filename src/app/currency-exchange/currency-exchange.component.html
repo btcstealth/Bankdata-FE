@@ -23,4 +23,7 @@
 <button id="currencyExchangeBtn">Get currency conversion</button>
 
 <p>The exchange rate from {{ fromCurrency }} to {{ toCurrency }} is: {{currencyExchangeResponse}}</p>
-<p>Meaning that 100 DKK can be converted to: {{ 100 * currencyExchangeResponse }} USD</p>
+<p>Meaning that 100 {{ fromCurrency }} can be converted to: {{ 100 * currencyExchangeResponse }} {{ toCurrency }}</p>
+
+
+<p class="red-text" *ngIf="displayRequestError">Something went wrong when attempting to compute the currency rate, please try refreshing the page or contect support ...</p>
