@@ -2,18 +2,18 @@
 
 <p>Pick the currency types you whish to see exchanges rates between!</p>
 
-<div class="form-group">
+<div class="form-group" style="padding-bottom: 10px;">
     <label for="">From currency:</label>
-    <select class="form-control" name="test" [(ngModel)]="fromCurrency">
+    <select class="form-control" [(ngModel)]="fromCurrency">
        <option [value]="'DKK'" [selected]="fromCurrency =='DKK'">DKK</option>
        <option [value]="'USD'" [selected]="fromCurrency =='USD'">USD</option>
        <option [value]="'EUR'" [selected]="fromCurrency =='EUR'">EUR</option>
     </select>
 </div>
 
-<div class="form-group">
+<div class="form-group" style="padding-bottom: 10px;">
     <label for="">To currency:</label>
-    <select class="form-control" name="test2" [(ngModel)]="toCurrency">
+    <select class="form-control" [(ngModel)]="toCurrency">
        <option [value]="'DKK'" [selected]="toCurrency =='DKK'">DKK</option>
        <option [value]="'USD'" [selected]="toCurrency =='USD'">USD</option>
        <option [value]="'EUR'" [selected]="toCurrency =='EUR'">EUR</option>
@@ -22,8 +22,21 @@
 
 <button id="currencyExchangeBtn">Get currency conversion</button>
 
-<p>The exchange rate from {{ fromCurrency }} to {{ toCurrency }} is: {{currencyExchangeResponse}}</p>
-<p>Meaning that 100 {{ fromCurrency }} can be converted to: {{ 100 * currencyExchangeResponse }} {{ toCurrency }}</p>
+<p *ngIf="currencyExchangeRate > 0" style="padding-bottom: 30px;">The exchange rate from {{ fromCurrency }} to {{ toCurrency }} is: {{currencyExchangeRate}}</p>
 
+
+
+
+<h2 for="fundsToExchange">Founds to exchange:</h2>
+<p>Wish to compute exchanging a specific amount. Enter the amount below and will be computed between the selected currencies</p>
+
+<form>
+    <input type="number" name="fundsToExchange" id="fundsToExchange" placeholder="Enter the amount of funds to exchange" size="10" maxlength="20" [(ngModel)]="fundsToExchange">
+    <br>
+    <br>
+    <input [disabled]="fundsToExchange <= 0 || currencyExchangeRate == 0.0" type="submit" value="Exchange" id="currencyExchangeAmountBtn">
+</form>
+
+<p *ngIf="currencyExchangeRate != 0.0 && fundsToExchange > 0">Meaning that {{ fundsToExchange }} {{ fromCurrency }} can be converted to: {{ currencyExchangeRate * fundsToExchange }} {{ toCurrency }}</p>
 
 <p class="red-text" *ngIf="displayRequestError">Something went wrong when attempting to compute the currency rate, please try refreshing the page or contect support ...</p>
